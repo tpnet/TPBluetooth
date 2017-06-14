@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_characteristic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="当前选择的characteristic:"
+        />
+    
+    
+    <EditText
+        android:id="@+id/et_write_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="要写入的数据"
+        />
+    <TextView
+        android:id="@+id/tv_read_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="读取到的数据:"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <Button
+            android:id="@+id/btn_write"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="写入数据"
+            />
+
+        <Button
+            android:id="@+id/btn_read"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手动读取数据"
+            />
+
+        <Button
+            android:id="@+id/btn_notify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="notify自动读取数据"
+            />
+        
+    </LinearLayout>
+    
+
+    <ExpandableListView
+        android:id="@+id/elv_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

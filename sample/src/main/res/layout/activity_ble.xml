@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/bt_start_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="扫描全部ble设备"
+            />
+        <Button
+            android:id="@+id/bt_stop_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="停止扫描"
+            />
+        
+        <ProgressBar
+            android:id="@+id/prb_find"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+   
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/bt_scan_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="扫描指定ble设备"
+            />
+        
+        <EditText
+            android:id="@+id/et_server_uuid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入指定Server UUID"
+            />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/btn_open_ble_server"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开启ble服务器"
+            />
+
+        <Button
+            android:id="@+id/btn_close_ble_server"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关闭ble服务器"
+            />
+        
+        
+        <TextView
+            android:id="@+id/tv_server_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rcv_ble_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    
+    
+    
+</LinearLayout>

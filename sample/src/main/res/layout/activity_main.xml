@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context="com.tpnet.bluedemo.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="是否支持蓝牙："
+    
+            android:visibility="gone"
+             />
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+             
+            android:visibility="gone"
+         />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前开关状态："
+            />
+
+        <CheckBox
+            android:id="@+id/cb_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前可被检测状态："
+            />
+
+        <CheckBox
+            android:id="@+id/cb_open_viviable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+ 
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+  
+
+        <Button
+            android:id="@+id/btn_start_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="搜索设备"
+
+            />
+
+        <Button
+            android:id="@+id/btn_stop_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/btn_start_search"
+            android:text="停止搜索"
+            />
+
+        <Button
+            android:id="@+id/btn_check_bind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/btn_stop_search"
+            android:text="查看已配对设备"
+            />
+
+
+        <Button
+            android:id="@+id/btn_server_listener"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_start_search"
+            android:text="作为服务器端开始监听"
+            />
+        
+        <TextView
+            android:id="@+id/tv_server_state"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@id/btn_start_search"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@id/btn_server_listener"
+            android:text="服务器关闭中"
+            
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
+        
+        
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcv_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+        
+        <ProgressBar
+            android:id="@+id/prb_search_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="2016.06.01 14:00"
+        android:textSize="14sp"
+        android:layout_margin="10dp"
+        />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="top|right"
+        >
+       
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="小米note"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:background="@drawable/back_message"
+            android:padding="10dp"
+            />
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="小米note"
+            android:maxLength="8"
+            android:singleLine="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+    </LinearLayout>
+    
+</LinearLayout>
